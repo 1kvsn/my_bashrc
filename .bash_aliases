@@ -33,7 +33,7 @@ alias bashrc='code ~/.bashrc ~/.bash_aliases ; source ~/.bashrc'
 alias lst='ls -ltr'
 
 # show hidden files
-alias la='ls -Alh' 
+alias la='ls -l -d .[!.]?*' 
 
 # show files only
 alias lf="ls -l | egrep -v '^d'" 
@@ -133,4 +133,9 @@ rmls() {
 function vanilla { cp -R /home/jax/AltCampus/vanilla_babel "$@" && cd "$1"; }
 
 #create react project and CD into it.
-function crapp { cp -R /home/jax/AltCampus/crapp_raw "$@" && cd "$1"; }
+function crapp { cp -R /home/jax/AltCampus/crapp_raw "$@" && cd "$1" && rmls .git; }
+
+
+
+# Webshare python
+alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
