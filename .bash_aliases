@@ -1,6 +1,3 @@
-alias la='ls -A'
-alias l='ls -CF'
-
 ## a quick way to get out of current directory ##
 alias ..='cd ..'
 alias ...='cd ../../../'
@@ -32,7 +29,7 @@ alias bashrc='code ~/.bashrc ~/.bash_aliases ; source ~/.bashrc'
 #Recently updated files last
 alias lst='ls -ltr'
 
-# show hidden files
+# Only show hidden files
 alias la='ls -l -d .[!.]?*' 
 
 # show files only
@@ -44,8 +41,8 @@ alias ldir="ls -l | egrep '^d'"
 # reloads the prompt, usefull to take new modifications into account
 alias reload="source ~/.bash_profile"
 
-# only show dot/hidden files
-alias lsh="ls -ld .??*"
+# only show dot/hidden files/Second Method
+#alias lsh="ls -ld .??*"
 
 
 #change to a directory and list all its contents
