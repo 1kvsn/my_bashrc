@@ -127,10 +127,10 @@ rmls() {
 
 
 # create a copy of vanilla babel
-function vanilla { cp -R /home/jax/AltCampus/vanilla_babel "$@" && cd "$1"; }
+function vanilla { cp -R /home/jax/AltCampus/vanilla_babel "$@" && cd "$1" && code . && npm start; }
 
 #create react project and CD into it.
-function crapp { cp -R /home/jax/AltCampus/crapp_raw "$@" && cd "$1" && rmls .git; }
+function crapp { cp -R /home/jax/AltCampus/crapp_raw "$@" && cd "$1" && rmls .git && code . && npm start; }
 
 
 
